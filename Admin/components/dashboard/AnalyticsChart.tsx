@@ -40,13 +40,8 @@ const availableFilters = [
   {
     value: "amt",
     label: "Users",
-<<<<<<< HEAD
   },
 ];
-=======
-  }
-]
->>>>>>> 366eb2ba711b28d4d9584c1b936288793e025566
 
 const AnalyticsChart = () => {
   const [selection, setSelection] = useState("pv");

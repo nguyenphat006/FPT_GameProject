@@ -25,7 +25,6 @@ const Sidebar = () => {
       <CommandList className="space-y-6"> 
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading='Suggestions'>
-<<<<<<< HEAD
           <CommandItem className="py-4 px-4 hover:bg-primary rounded-md transition-colors duration-300 ease-in-out">
             <Newspaper className='mr-3 h-5 w-5' />
             <Link href='/'>Dashboard</Link>
@@ -40,22 +39,6 @@ const Sidebar = () => {
           </CommandItem>
           <CommandItem className="py-4 px-4 hover:bg-primary rounded-md transition-colors duration-300 ease-in-out">
             <Users className='mr-3 h-5 w-5' />
-=======
-          <CommandItem>
-            <Newspaper className='mr-2 h-4 w-4' />
-            <Link href='/'>Dashboard</Link>
-          </CommandItem>
-          <CommandItem>
-            <CalendarFoldIcon className='mr-2 h-4 w-4' />
-            <Link href='/events'>Event</Link>
-          </CommandItem>
-          <CommandItem>
-            <Gamepad2 className='mr-2 h-4 w-4' />
-            <Link href='/games'>Games</Link>
-          </CommandItem>
-          <CommandItem>
-            <Users className='mr-2 h-4 w-4' />
->>>>>>> 366eb2ba711b28d4d9584c1b936288793e025566
             <Link href='/users'>User</Link>
           </CommandItem>
         </CommandGroup>

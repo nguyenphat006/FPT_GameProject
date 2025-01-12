@@ -65,17 +65,11 @@ const GamesTable = ({ limit, title }: GamesTableProps) => {
                 </Link>
               </TableCell>
               <TableCell>
-<<<<<<< HEAD
                 <Link href={`/games/delete/${game.id}`}>
                   <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded text-xs'>
                     Delete
                   </button>
                 </Link>
-=======
-                  <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded text-xs'>
-                    Delete
-                  </button>
->>>>>>> 366eb2ba711b28d4d9584c1b936288793e025566
               </TableCell>
             </TableRow>
           ))}
