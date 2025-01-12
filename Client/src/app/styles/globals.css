@@ -1,0 +1,201 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+
+/* Gradient background for the entire page */
+body {
+  background: linear-gradient(to bottom right, #1a202c, #4a5568, #2d3748);
+  min-height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(26, 32, 44, 0.8);
+}
+
+/* Hero section styles */
+.hero-image {
+  filter: brightness(0.7);
+}
+
+/* Game card hover effect */
+.game-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom button styles */
+.custom-button {
+  @apply bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300;
+}
+
+.custom-button:hover {
+  @apply bg-purple-700;
+}
+
+/* Footer link hover effect */
+.footer-link {
+  @apply text-gray-400 hover:text-purple-400 transition duration-300;
+}
+
+/* Responsive font sizes */
+@media (max-width: 640px) {
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* Animation for game cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Custom styles for the search input */
+.search-input {
+  @apply bg-gray-800 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600;
+}
+
+/* Styles for mobile menu */
+.mobile-menu {
+  @apply fixed inset-0 bg-gray-900 bg-opacity-95 z-50 flex flex-col items-center justify-center;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.mobile-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-menu-item {
+  @apply text-white text-xl mb-4 hover:text-purple-400 transition duration-300;
+}
+
+/* Add a subtle texture to the background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Improve readability of text on darker backgrounds */
+p, h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Add a subtle glow effect to buttons on hover */
+.custom-button:hover {
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+}
+
+/* Style for section dividers */
+.section-divider {
+  @apply w-full h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent my-8;
+}
+
+/* Add some depth to cards */
+.game-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Improve focus styles for accessibility */
+a:focus, button:focus, input:focus {
+  @apply outline-none ring-2 ring-purple-500 ring-opacity-50;
+}
+
+/* Add a subtle animation to the logo */
+.nav-logo {
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Style for a loading spinner (if needed) */
+.spinner {
+  @apply w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin;
+}
+
+/* Add a pulsing effect to the CTA button */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.cta-button {
+  animation: pulse 2s infinite;
+}
+
+/* Improve contrast for input placeholders */
+::placeholder {
+  @apply text-gray-400;
+}
+
+/* Add a transition effect to page changes (if using page transitions) */
+.page-transition-enter {
+  opacity: 0;
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
